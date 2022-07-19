@@ -7,7 +7,7 @@ pipeline {
             steps {
                 git credentialsId: 'Imrserg',
                     branch: 'main',
-                    url: ''
+                    url: 'https://github.com/Imrserg/SM_Selenoid.git'
             }
         }
 	stage('Prepare Selenoid') {
