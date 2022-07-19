@@ -6,7 +6,7 @@ pipeline {
         stage('Git checkout') {
             steps {
                 git credentialsId: 'Imrserg',
-                    branch: 'main',
+                    branch: 'master',
                     url: 'https://github.com/Imrserg/SM_Selenoid.git'
             }
         }
@@ -21,7 +21,7 @@ pipeline {
         }
 	stage('Chrome') {
             steps {
-		sh 'mvn clean test "-Dsurefire.suiteXmlFiles=src/test/resources/TestNG.xml" "-Dtestng.dtd.http=true"'
+		sh 'mvn clean test "-Dsurefire.suiteXmlFiles=src/main/resources/TestNG.xml" "-Dtestng.dtd.http=true"'
             }
         }
     }
