@@ -1,7 +1,7 @@
 # SM_Selenoid
 
-Selenoid 
-Maven
-Allure
-Java
-Selenide
+- Selenoid 
+- Maven
+- Allure
+- Java
+- Selenide
