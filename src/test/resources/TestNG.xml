@@ -5,7 +5,9 @@
         <listener class-name="listeners.CustomListener"/>
         <listener class-name="listeners.RetryListener"/>
     </listeners>
+
     <parameter name="BROWSER" value="${BROWSER}"/>
+
     <test name="Tests">
         <packages>
             <package name="tests"/>
