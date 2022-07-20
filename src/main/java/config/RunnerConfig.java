@@ -11,6 +11,7 @@ public class RunnerConfig {
 
 	@Step
 	public void setUpConfig(final String browser, final String browserVersion) {
+
 		final boolean modeDebug = true;
 
 		Configuration.pageLoadTimeout = 20000;
@@ -23,7 +24,7 @@ public class RunnerConfig {
 		}
 		if (!modeDebug) {
 			Configuration.remote = "http://34.77.150.104:4444/wd/hub";
-			Configuration.browserCapabilities.setCapability("enableVNC", false);
+			Configuration.browserCapabilities.setCapability("enableVNC", true);
 			Configuration.browserCapabilities.setCapability("enableVideo", false);
 		}
 		SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
