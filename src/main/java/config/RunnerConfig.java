@@ -23,7 +23,7 @@ public class RunnerConfig {
 			Configuration.browserVersion = browserVersion;
 		}
 		if (!modeDebug) {
-			Configuration.remote = "http://localhost:4444/wd/hub";
+			Configuration.remote = "http://34.77.150.104:4444/wd/hub";
 			Configuration.browserCapabilities.setCapability("enableVNC", false);
 			Configuration.browserCapabilities.setCapability("enableVideo", false);
 		}
