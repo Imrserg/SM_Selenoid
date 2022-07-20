@@ -6,7 +6,9 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class BasePage {
+
 	private final RunnerConfig config = new RunnerConfig();
+
 	public WikipediaMainPage wikipediaMainPage = new WikipediaMainPage();
 
 	@BeforeClass

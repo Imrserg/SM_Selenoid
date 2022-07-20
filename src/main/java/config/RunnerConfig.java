@@ -11,17 +11,25 @@ public class RunnerConfig {
 
 	@Step
 	public void setUpConfig(final String browser, final String browserVersion) {
+
+		final boolean modeDebug = true;
+
 		Configuration.pageLoadTimeout = 20000;
 		Configuration.timeout = 10000;
 		Configuration.downloadsFolder = "target/build/downloads";
 		Configuration.reportsFolder = "target/screenshots";
+		Configuration.browserSize = "1920x1080";
 		Configuration.browser = browser;
 		if (browserVersion != null) {
 			Configuration.browserVersion = browserVersion;
 		}
+		if (!modeDebug) {
+			Configuration.remote = "http://localhost:4444/wd/hub";
+			Configuration.browserCapabilities.setCapability("enableVNC", false);
+			Configuration.browserCapabilities.setCapability("enableVideo", false);
+		}
 		SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
 				.screenshots(true)
 				.savePageSource(true));
-		log.info("ok");
 	}
 }

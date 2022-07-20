@@ -6,6 +6,7 @@ import org.testng.ITestResult;
 
 @Slf4j
 public class RetryConfig implements IRetryAnalyzer {
+
 	private int retryCount = 1;
 
 	@Override

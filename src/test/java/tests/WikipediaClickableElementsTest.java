@@ -24,5 +24,4 @@ public class WikipediaClickableElementsTest extends BasePage {
 		clickTheElementByTagAndText("span", "Заглавная страница");
 		clickTheElementByTagAndText("span", "Обсуждение", 2);
 	}
-
 }
