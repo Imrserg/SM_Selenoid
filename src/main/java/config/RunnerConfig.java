@@ -18,7 +18,6 @@ public class RunnerConfig {
 		Configuration.timeout = 10000;
 		Configuration.downloadsFolder = "target/build/downloads";
 		Configuration.reportsFolder = "target/screenshots";
-		Configuration.browserSize = "1920x1080";
 		Configuration.browser = browser;
 		if (browserVersion != null) {
 			Configuration.browserVersion = browserVersion;
