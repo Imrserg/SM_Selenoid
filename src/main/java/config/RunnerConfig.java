@@ -11,7 +11,6 @@ public class RunnerConfig {
 
 	@Step
 	public void setUpConfig(final String browser, final String browserVersion) {
-
 		final boolean modeDebug = true;
 
 		Configuration.pageLoadTimeout = 20000;
