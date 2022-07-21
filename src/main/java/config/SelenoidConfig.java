@@ -2,6 +2,7 @@ package config;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,7 +12,7 @@ public class SelenoidConfig {
 
 	public void createWebDriverInstance(String browser) {
 		final String chrome = "Chrome";
-		final String browser2 = System.getenv("BROWSER");
+		//final String browser2 = System.getenv("BROWSER");
 		if (browser.equals("${BROWSER}")) {
 			browser = chrome;
 		}
@@ -31,6 +32,7 @@ public class SelenoidConfig {
 		Configuration.browserCapabilities.setCapability("enableVNC", false);
 		Configuration.browserCapabilities.setCapability("enableVideo", false);
 		SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
+		WebDriverManager.chromedriver().setup();
 		log.info("Browser {} instance is ready to working", browser);
 	}
 }
