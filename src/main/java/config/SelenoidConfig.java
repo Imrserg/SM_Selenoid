@@ -11,6 +11,7 @@ public class SelenoidConfig {
 
 	public void createWebDriverInstance(String browser) {
 		final String chrome = "Chrome";
+		final String browser2 = System.getenv("BROWSER");
 		if (browser.equals("${BROWSER}")) {
 			browser = chrome;
 		}
@@ -22,7 +23,7 @@ public class SelenoidConfig {
 			Configuration.browserVersion = "102";
 		}
 		Configuration.browser = browser;
-		Configuration.remote = "http://localhost:4444/wd/hub";
+		Configuration.remote = "http://10.132.0.2:4444/wd/hub";
 		Configuration.timeout = 30_000;
 		Configuration.reportsFolder = "target/screenshots";
 		Configuration.clickViaJs = true;
