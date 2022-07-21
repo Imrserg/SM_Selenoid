@@ -23,16 +23,16 @@ public class SelenoidConfig {
 			Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
 			Configuration.browserVersion = "102";
 		}
+		Configuration.driverManagerEnabled = false;
 		Configuration.browser = browser;
-		Configuration.remote = "http://10.132.0.2:4444/wd/hub";
+		Configuration.remote = "http://34.77.150.104:4444/wd/hub";
 		Configuration.timeout = 30_000;
 		Configuration.reportsFolder = "target/screenshots";
 		Configuration.clickViaJs = true;
-		Configuration.baseUrl = "";
 		Configuration.browserCapabilities.setCapability("enableVNC", true);
 		Configuration.browserCapabilities.setCapability("enableVideo", false);
 		SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
 		log.info("Browser {} instance is ready to working", browser);
 	}
 }

@@ -12,8 +12,9 @@ public class BasePage {
 	public WikipediaMainPage wikipediaMainPage = new WikipediaMainPage();
 
 	@BeforeClass
-	@Parameters ( {"browser", "browserVersion"})
-	public void setUp(@Optional ("chrome") final String browser, @Optional final String browserVersion) {
-		config.setUpConfig(browser, browserVersion);
+	//@Parameters ( {"browser", "browserVersion"})
+	// ("chrome") final String browser, @Optional final String browserVersion
+	public void setUp() {
+		config.setUpConfig();
 	}
 }

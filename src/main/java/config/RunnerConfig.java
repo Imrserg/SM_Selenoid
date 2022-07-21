@@ -10,25 +10,16 @@ import lombok.extern.slf4j.Slf4j;
 public class RunnerConfig {
 
 	@Step
-	public void setUpConfig(final String browser, final String browserVersion) {
-
-		final boolean modeDebug = true;
-
-		Configuration.pageLoadTimeout = 20000;
-		Configuration.timeout = 10000;
+	public void setUpConfig() {
+		Configuration.pageLoadTimeout = 20_000;
+		Configuration.timeout = 10_000;
 		Configuration.downloadsFolder = "target/build/downloads";
 		Configuration.reportsFolder = "target/screenshots";
-		Configuration.browser = browser;
-		if (browserVersion != null) {
-			Configuration.browserVersion = browserVersion;
-		}
-		if (!modeDebug) {
-			Configuration.remote = "http://localhost:4444/wd/hub";
-			Configuration.browserCapabilities.setCapability("enableVNC", true);
-			Configuration.browserCapabilities.setCapability("enableVideo", false);
-		}
-		SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
-				.screenshots(true)
-				.savePageSource(true));
+		Configuration.browser = "chrome";
+		Configuration.browserVersion = "102";
+		Configuration.remote = "http://localhost:4444/wd/hub";
+		Configuration.browserCapabilities.setCapability("enableVNC", true);
+		Configuration.browserCapabilities.setCapability("enableVideo", false);
+		SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
 	}
 }
