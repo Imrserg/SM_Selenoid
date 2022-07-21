@@ -29,7 +29,7 @@ public class SelenoidConfig {
 		Configuration.reportsFolder = "target/screenshots";
 		Configuration.clickViaJs = true;
 		Configuration.baseUrl = "";
-		Configuration.browserCapabilities.setCapability("enableVNC", false);
+		Configuration.browserCapabilities.setCapability("enableVNC", true);
 		Configuration.browserCapabilities.setCapability("enableVideo", false);
 		SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
 		WebDriverManager.chromedriver().setup();
