@@ -37,5 +37,4 @@ public class CustomListener implements ITestListener {
 	@Override
 	public void onFinish(final ITestContext context) {
 	}
-
 }
