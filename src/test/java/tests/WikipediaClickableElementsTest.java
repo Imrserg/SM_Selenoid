@@ -15,7 +15,7 @@ public class WikipediaClickableElementsTest extends BasePage {
 		Selenide.open(Urls.WIKIPEDIA_MAIN_PAGE.getUrl());
 	}
 
-	@Test
+	@Test (description = "Verify tag text")
 	public void checkClickableElements() {
 		wikipediaMainPage.pressButtonWithLanguage("RU");
 		clickTheElementByTagAndText("span", "Содержание");
