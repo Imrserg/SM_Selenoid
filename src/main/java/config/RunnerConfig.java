@@ -11,8 +11,8 @@ public class RunnerConfig {
 
 	@Step
 	public void setUpConfig() {
-		Configuration.pageLoadTimeout = 30_000;
-		Configuration.timeout = 30_000;
+		Configuration.pageLoadTimeout = 50_000;
+		Configuration.timeout = 50_000;
 		Configuration.downloadsFolder = "target/build/downloads";
 		Configuration.reportsFolder = "target/screenshots";
 		Configuration.browser = "firefox";
