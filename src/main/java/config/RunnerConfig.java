@@ -18,7 +18,7 @@ public class RunnerConfig {
 		Configuration.browser = "firefox";
 		Configuration.baseUrl = "";
 		//Configuration.browserVersion = "102";
-		Configuration.remote = "http://34.77.150.104:4444/wd/hub"; //for run tests locally on remote
+		//Configuration.remote = "http://34.77.150.104:4444/wd/hub"; //for run tests locally on remote
 		//Configuration.remote = "http://localhost:4444/wd/hub"; //for local should be empty
 		Configuration.browserCapabilities.setCapability("enableVNC", true);
 		Configuration.browserCapabilities.setCapability("enableVideo", false);

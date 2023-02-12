@@ -23,9 +23,10 @@ public class SelenoidConfig {
 			Configuration.browserCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
 			Configuration.browserVersion = "102";
 		}
-		Configuration.driverManagerEnabled = false;
+		Configuration.driverManagerEnabled = true;
 		Configuration.browser = browser;
-		Configuration.remote = "http://34.77.150.104:4444/wd/hub";
+		//Configuration.remote = "http://34.77.150.104:4444/wd/hub";
+		Configuration.remote = "";
 		Configuration.timeout = 30_000;
 		Configuration.reportsFolder = "target/screenshots";
 		Configuration.clickViaJs = true;

@@ -39,7 +39,7 @@ public class WikipediaMainPage {
 			case "PL":
 				return "Polski";
 			default:
-				Assert.fail("Country code " + countryCode + " not found!");
+				Assert.fail(String.format("Country code %s not found!", countryCode));
 		}
 		return null;
 	}
